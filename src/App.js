@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
+import "./App.css";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import {AppBar, FlatButton} from "material-ui";
+
 
 class App extends Component {
-    constructor(props){
-       super(props);
-    }
-
   render() {
     return (
-      <div className="App">
-      </div>
-    );
-  }
-}
+      <div>
+        <MuiThemeProvider>
+          <div>
+          <AppBar title={"Reports"}>
+          </AppBar>
+              <FlatButton label={"Бутон"}/>
+              <FlatButton label={"Бутон"}/>
+              <FlatButton label={"Бутон"}/>
+              <FlatButton label={"Бутон"}/>
+          </div>
+        </MuiThemeProvider>
 
-export default App;
+      </div>
+  );
+  }
+  }
+
+  export default App;
